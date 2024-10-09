@@ -2,7 +2,9 @@
 // You can write your code in this editor
 
 //Checando se estou tocando no chão
-chao = place_meeting(x, y + 1, obj_plat);
+chao       = place_meeting(x, y + 1, obj_plat);
+parede_dir = place_meeting(x + 1, y, obj_plat);
+parede_esq = place_meeting(x - 1, y, obj_plat);
 
 //Configurando meu timer do pulo
 if(chao)
@@ -13,6 +15,15 @@ if(chao)
 else
 {
 	if(timer_pulo > 0) timer_pulo--;	
+}
+
+if(parede_dir || parede_esq)
+{
+	timer_parede = limite_parede;
+}
+else
+{
+	if(timer_parede > 0) timer_parede--;	
 }
 
 //-------------------------Controles
@@ -74,8 +85,41 @@ switch(estado)
 		//Movendo
 		velh = lerp(velh, _avanco_h, acel);
 		
-		//Gravidade
-		if(!chao) velv += grav;
+		//Gravidade && Parede
+	
+		if(!chao && (parede_dir || parede_esq))
+		{
+			//Não estou no chão, mas estou tocando na parede
+			if(velv > 0) //Estou na parede e estou caindo
+			{
+				velv = lerp(velv, deslize, acel);
+			}
+			else
+			{
+				//Estou subindo
+				velv += grav;
+			}
+			
+			//Pulando pelas paredes!!!
+			if(parede_dir && _jump) //Estou na parede e tentei pular
+			{
+				velv =- max_velv;
+				velh   =- max_velh;
+				xscale = .5;
+				yscale = 1.5;
+			}
+			else if(parede_esq && _jump)
+			{
+				velv   =- max_velv;
+				velh   = max_velh;
+				xscale = .5;
+				yscale = 1.5;
+			}
+		}
+		else if(!chao) //Não estou no chão e nem na parede
+		{
+		   velv += grav;
+		}
 		
 		//Pulando
 		if (_jump && (chao || timer_pulo))//ou ele ta no chao ou timer pulo ainda tem valor
