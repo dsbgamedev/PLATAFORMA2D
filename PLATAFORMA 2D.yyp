@@ -35,6 +35,7 @@
   "name":"PLATAFORMA 2D",
   "resources":[
     {"id":{"name":"obj_plat","path":"objects/obj_plat/obj_plat.yy",},},
+    {"id":{"name":"obj_player_vest","path":"objects/obj_player_vest/obj_player_vest.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"armadilha_giratoria","path":"sprites/armadilha_giratoria/armadilha_giratoria.yy",},},
