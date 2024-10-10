@@ -29,13 +29,14 @@ timer_parede  = 0;
 
 //----------------------Variaveis de controle
 chao   = false;
-parede_dir = false;
-parede_esq = false;
-xscale	   = 1;
-yscale	   = 1;
-dura	   = room_speed / 4;
-dir		   = 0;
-carga	   = 1;
+parede_dir    = false;
+parede_esq    = false;
+xscale	      = 1;
+yscale	      = 1;
+dura	      = room_speed / 4;
+dir		      = 0;
+carga	      = 1;
+ultima_parede = 0;
 
 //----------------------Controlando cor
 sat = 255;

@@ -19,6 +19,8 @@ else
 
 if(parede_dir || parede_esq)
 {
+	if(parede_dir) ultima_parede = 0;
+	else ultima_parede = 1;
 	timer_parede = limite_parede;
 }
 else
@@ -85,14 +87,45 @@ switch(estado)
 		//Movendo
 		velh = lerp(velh, _avanco_h, acel);
 		
+		//Aplicando "poeira"
+		if(abs(velh) > max_velh - .5 && chao)
+		{
+			//Criando a poeira
+			var _chance = random(100);
+			if(_chance > 90)
+			{
+				for(var i = 0; i <random_range(4, 10); i++ )
+				{
+					var _xx = random_range(x - sprite_width/2, x + sprite_width/2);	
+		
+					instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+				}
+			}
+		}
+		
 		//Gravidade && Parede
 	
-		if(!chao && (parede_dir || parede_esq))
+		if(!chao && (parede_dir || parede_esq || timer_parede))
 		{
 			//Não estou no chão, mas estou tocando na parede
 			if(velv > 0) //Estou na parede e estou caindo
 			{
 				velv = lerp(velv, deslize, acel);
+				
+				//Criando a poeira
+				//Criando a poeira
+			    var _chance = random(100);
+				if(_chance > 90)
+				{
+					for(var i = 0; i <random_range(4, 10); i++ )
+					{
+						var _onde = parede_dir - parede_esq;
+						var _xx   = x + _onde * sprite_width/2;
+						var _yy   = y + random_range(- sprite_height/4, 0);
+		
+						instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+					}
+				}
 			}
 			else
 			{
@@ -101,19 +134,40 @@ switch(estado)
 			}
 			
 			//Pulando pelas paredes!!!
-			if(parede_dir && _jump) //Estou na parede e tentei pular
+			if(!ultima_parede && _jump) //Estou na parede e tentei pular
 			{
 				velv =- max_velv;
 				velh   =- max_velh;
 				xscale = .5;
 				yscale = 1.5;
+				
+								
+				for(var i = 0; i <random_range(4, 10); i++ )
+				{
+					var _onde = parede_dir - parede_esq;
+					var _xx   = x + sprite_width/2;
+					var _yy   = y + random_range(- sprite_height/4, 0);
+		
+					instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+				}
+				
 			}
-			else if(parede_esq && _jump)
+			else if(ultima_parede && _jump)
 			{
 				velv   =- max_velv;
 				velh   = max_velh;
 				xscale = .5;
 				yscale = 1.5;
+				
+				//Criando poeira				
+				for(var i = 0; i <random_range(4, 10); i++ )
+				{
+					var _onde = parede_dir - parede_esq;
+					var _xx   = x - sprite_width/2;
+					var _yy   = y + random_range(- sprite_height/4, 0);
+		
+					instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+				}
 			}
 		}
 		else if(!chao) //Não estou no chão e nem na parede
@@ -129,6 +183,15 @@ switch(estado)
 			//Alterando a escala
 			xscale = .5;
 			yscale = 1.5;
+			
+			//Criando a poeira
+			for(var i = 0; i <random_range(4, 10); i++ )
+			{
+				var _xx = random_range(x - sprite_width, x + sprite_width);	
+		
+				instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+			}
+			
 		}
 				
 		//Buffer do pulo
@@ -150,7 +213,17 @@ switch(estado)
 				//Garantir que não vai pular infinitamente
 				timer_pulo  = 0;
 				timer_queda = 0;
+				
+				//Criando a poeira
+				for(var i = 0; i <random_range(4, 10); i++ )
+				{
+					var _xx = random_range(x - sprite_width, x + sprite_width);	
+		
+					instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+				}
+				
 			}
+			
 			timer_queda--;
 		}
 		
