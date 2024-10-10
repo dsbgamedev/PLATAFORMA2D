@@ -2,6 +2,8 @@
 // You can write your code in this editor
 
 //Desenhado a minha sprite com a escala atualizada
-draw_sprite_ext(sprite_index, image_index, x, y,
-xscale, yscale, image_angle, image_blend, image_alpha);
+
+if(velh != 0) ver = sign(velh);
+
+draw_sprite_ext(sprite_index, image_index, x, y + (sprite_height/2 - sprite_height/2 * yscale), xscale * ver, yscale, image_angle, image_blend, image_alpha);
 
