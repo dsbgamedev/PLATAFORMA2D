@@ -10,12 +10,12 @@ switch(estado)
 	case "avanca":
 		
 		//Descobrindo a direção do limte
-		var _limite_x = lengthdir_x(limite, dir);
-		var _limite_y = lengthdir_y(limite, dir);
+		var _limite_x = lengthdir_x(limite, real(dir));
+		var _limite_y = lengthdir_y(limite, real(dir));
 		
 		//Movendo
-		x += lengthdir_x(vel, dir);
-		y += lengthdir_y(vel, dir);
+		x += lengthdir_x(vel, real(dir));
+		y += lengthdir_y(vel, real(dir));
 		
 		//Trocando de estado
 		if(_limite_x > 0) //tem que ir para direita
@@ -27,13 +27,22 @@ switch(estado)
 			if(x <= + _limite_x) estado = "recua";	
 		}
 		
+		if(_limite_x > 0) //tem que ir para direita
+		{
+			if(y >= ystart + _limite_y) estado = "recua";	
+		}
+		else if(_limite_y < 0) //Tenho que ir para a esquerda
+		{
+			if(y <= + _limite_y) estado = "recua";	
+		}
+		
 	break;
 	
 	case "recua":	
 		
 		//Movendo
-		x -= lengthdir_x(vel, dir);
-		y -= lengthdir_y(vel, dir);
+		x -= lengthdir_x(vel, real(dir));
+		y -= lengthdir_y(vel, real(dir));
 		
 		//Mudando de estado
 		if(x == xstart && y == ystart) estado = "avanca";

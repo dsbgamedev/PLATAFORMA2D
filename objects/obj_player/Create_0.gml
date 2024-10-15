@@ -45,7 +45,7 @@ sat = 255;
 //State Machine
 enum state //variavel global state usa uma vez e depois se perde
 {
-	parado, movendo, dash	
+	parado, movendo, dash, morte	
 }
 
 estado = state.parado;

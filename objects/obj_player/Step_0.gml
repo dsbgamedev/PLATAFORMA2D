@@ -46,9 +46,11 @@ _avanco_h = (_right - _left) * max_velh;
 if(chao) acel = acel_chao;
 else     acel = acel_ar; 
 
+#region Switch Estado
 //------------------------- STATE MACHINE------------------------\\
 switch(estado)
 {
+	#region Parado
 	case state.parado:
 		
 		velh = 0;
@@ -81,7 +83,9 @@ switch(estado)
 		}
 		
 		break;
-	
+		#endregion
+
+    #region Movendo	
 	case state.movendo:
 		
 		//Abaixando
@@ -252,7 +256,9 @@ switch(estado)
 		velv = clamp(velv, -max_velv, max_velv);
 		
 		break;
-	
+		#endregion	
+
+    #region Dash	
 	case state.dash:
 		
 		dura--;
@@ -292,10 +298,17 @@ switch(estado)
 		}
 		
 		break;
+		#endregion
+		
+	#region Morte
+		case state.morte:
+			room_restart();
+		break;
+	#endregion
 }
+#endregion
 
-show_debug_message(estado);
-
+#region Carga
 switch(carga)
 {
 	case 0:
@@ -306,7 +319,7 @@ switch(carga)
 	sat = lerp(sat, 255, .5);
 	break;
 }
-
+#endregion
 //Definindo a cor dele
 image_blend = make_color_hsv(20, sat, 255);
 
