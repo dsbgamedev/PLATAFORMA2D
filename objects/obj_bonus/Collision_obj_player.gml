@@ -4,5 +4,13 @@
 //Recarregando o Player
 if(other.carga <= 0) other.carga++;
 
-instance_destroy();
+sumir = true;
 
+//Gerando os pedaçoes part(particulas)
+for(var i = 0; i < irandom_range(20, 50); i++)
+{
+	var ped = instance_create_depth(x, y, depth - 1000, obj_part);
+	ped.sprite_index = sprite_index;
+}
+
+alarm[0] = room_speed * 3;
