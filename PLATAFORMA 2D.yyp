@@ -41,9 +41,11 @@
     {"id":{"name":"obj_plat","path":"objects/obj_plat/obj_plat.yy",},},
     {"id":{"name":"obj_player_vest","path":"objects/obj_player_vest/obj_player_vest.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_proximo","path":"objects/obj_proximo/obj_proximo.yy",},},
     {"id":{"name":"obj_serra","path":"objects/obj_serra/obj_serra.yy",},},
     {"id":{"name":"obj_vel","path":"objects/obj_vel/obj_vel.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"background","path":"sprites/background/background.yy",},},
     {"id":{"name":"double_jump_item_1","path":"sprites/double_jump_item_1/double_jump_item_1.yy",},},
     {"id":{"name":"double_jump_item_2","path":"sprites/double_jump_item_2/double_jump_item_2.yy",},},
@@ -56,6 +58,7 @@
     {"id":{"name":"spr_plat_cima","path":"sprites/spr_plat_cima/spr_plat_cima.yy",},},
     {"id":{"name":"spr_plat","path":"sprites/spr_plat/spr_plat.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"spr_proximo","path":"sprites/spr_proximo/spr_proximo.yy",},},
     {"id":{"name":"spr_serra","path":"sprites/spr_serra/spr_serra.yy",},},
     {"id":{"name":"spr_vel","path":"sprites/spr_vel/spr_vel.yy",},},
     {"id":{"name":"tileset","path":"sprites/tileset/tileset.yy",},},
@@ -64,6 +67,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
