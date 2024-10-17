@@ -35,6 +35,7 @@
   "name":"PLATAFORMA 2D",
   "resources":[
     {"id":{"name":"obj_bonus","path":"objects/obj_bonus/obj_bonus.yy",},},
+    {"id":{"name":"obj_item","path":"objects/obj_item/obj_item.yy",},},
     {"id":{"name":"obj_morte","path":"objects/obj_morte/obj_morte.yy",},},
     {"id":{"name":"obj_part","path":"objects/obj_part/obj_part.yy",},},
     {"id":{"name":"obj_plat_cima","path":"objects/obj_plat_cima/obj_plat_cima.yy",},},
@@ -52,9 +53,9 @@
     {"id":{"name":"double_jump_item_3","path":"sprites/double_jump_item_3/double_jump_item_3.yy",},},
     {"id":{"name":"double_jump_item_4","path":"sprites/double_jump_item_4/double_jump_item_4.yy",},},
     {"id":{"name":"osso_dourado_1","path":"sprites/osso_dourado_1/osso_dourado_1.yy",},},
-    {"id":{"name":"osso_dourado_2","path":"sprites/osso_dourado_2/osso_dourado_2.yy",},},
     {"id":{"name":"spr_bonus","path":"sprites/spr_bonus/spr_bonus.yy",},},
     {"id":{"name":"spr_morte","path":"sprites/spr_morte/spr_morte.yy",},},
+    {"id":{"name":"spr_osso","path":"sprites/spr_osso/spr_osso.yy",},},
     {"id":{"name":"spr_plat_cima","path":"sprites/spr_plat_cima/spr_plat_cima.yy",},},
     {"id":{"name":"spr_plat","path":"sprites/spr_plat/spr_plat.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},

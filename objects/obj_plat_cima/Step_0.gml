@@ -3,9 +3,26 @@
 
 if(instance_exists(obj_plat))
 {
-	if(obj_player.y > y) //Estou mais alto que o player
-		sprite_index =- 1;
-	else
+	
+	if(y + 5 > obj_player.y -2)
+	{
 		sprite_index = spr_plat_cima;
-		
+		image_alpha = 1
+	}
+	else
+	{
+		sprite_index = -1;
+		image_alpha = 0.4;
+	}
+	
+	////if(obj_player.y > y) //Estou mais alto que o player
+	//if(obj_player.y > y) //Estou mais alto que o player
+	//{	
+	//	sprite_index = - 1;
+	//	//image_alpha = 1;
+	//}else
+	//{
+	//	sprite_index = spr_plat_cima;
+	//	//image_alpha  = .3;
+	//}	
 }
