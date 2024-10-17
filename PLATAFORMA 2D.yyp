@@ -35,6 +35,7 @@
   "name":"PLATAFORMA 2D",
   "resources":[
     {"id":{"name":"obj_bonus","path":"objects/obj_bonus/obj_bonus.yy",},},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_item","path":"objects/obj_item/obj_item.yy",},},
     {"id":{"name":"obj_morte","path":"objects/obj_morte/obj_morte.yy",},},
     {"id":{"name":"obj_part","path":"objects/obj_part/obj_part.yy",},},

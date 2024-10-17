@@ -50,4 +50,12 @@ enum state //variavel global state usa uma vez e depois se perde
 
 estado = state.parado;
 
+//----------------CRIANDO A CAMERA
+
+if(!instance_exists(obj_camera))
+{
+	//Camera não existe
+	instance_create_layer(0,0, "Camera", obj_camera);
+}
+
 

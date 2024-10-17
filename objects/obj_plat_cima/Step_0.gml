@@ -15,14 +15,4 @@ if(instance_exists(obj_plat))
 		image_alpha = 0.4;
 	}
 	
-	////if(obj_player.y > y) //Estou mais alto que o player
-	//if(obj_player.y > y) //Estou mais alto que o player
-	//{	
-	//	sprite_index = - 1;
-	//	//image_alpha = 1;
-	//}else
-	//{
-	//	sprite_index = spr_plat_cima;
-	//	//image_alpha  = .3;
-	//}	
 }
