@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //Checando se eu acabei de cair no chão
-var _temp = place_meeting(x, y + 1, obj_plat);
+var _temp = instance_place(x, y + 1, global.col);
 
 //Exemplo como Begin Step roda primeiro
 //Entao ele consegue checar se estava no ar antes

@@ -1,12 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+
 if(instance_exists(obj_plat))
 {
 	
 	if(y + 5 > obj_player.y -2)
 	{
-		sprite_index = spr_plat_cima;
+		sprite_index = tileset;
 		image_alpha = 1
 	}
 	else

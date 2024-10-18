@@ -2,9 +2,9 @@
 // You can write your code in this editor
 
 //Checando se estou tocando no chão
-chao       = place_meeting(x, y + 1, obj_plat);
-parede_dir = place_meeting(x + 1, y, obj_plat);
-parede_esq = place_meeting(x - 1, y, obj_plat);
+chao       = place_meeting(x, y + 1, global.col);
+parede_dir = place_meeting(x + 1, y, global.col);
+parede_esq = place_meeting(x - 1, y, global.col);
 
 //Configurando meu timer do pulo
 if(chao)
