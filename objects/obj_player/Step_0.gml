@@ -110,7 +110,7 @@ switch(estado)
 				{
 					var _xx = random_range(x - sprite_width/2, x + sprite_width/2);	
 		
-					instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+					instance_create_layer(_xx, y, "particulas", obj_vel);	
 				}
 			}
 		}
@@ -135,7 +135,7 @@ switch(estado)
 						var _xx   = x + _onde * sprite_width/2;
 						var _yy   = y + random_range(- sprite_height/4, 0);
 		
-						instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+						instance_create_layer(_xx, y, "particulas", obj_vel);	
 					}
 				}
 			}
@@ -160,7 +160,7 @@ switch(estado)
 					var _xx   = x + sprite_width/2;
 					var _yy   = y + random_range(- sprite_height/4, 0);
 		
-					instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+					instance_create_layer(_xx, y, "particulas", obj_vel);	
 				}
 				
 			}
@@ -178,7 +178,7 @@ switch(estado)
 					var _xx   = x - sprite_width/2;
 					var _yy   = y + random_range(- sprite_height/4, 0);
 		
-					instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+					instance_create_layer(_xx, y, "particulas", obj_vel);	
 				}
 			}
 		}
@@ -201,7 +201,7 @@ switch(estado)
 			{
 				var _xx = random_range(x - sprite_width, x + sprite_width);	
 		
-				instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+				instance_create_layer(_xx, y, "particulas", obj_vel);	
 			}
 			
 		}
@@ -231,7 +231,7 @@ switch(estado)
 				{
 					var _xx = random_range(x - sprite_width, x + sprite_width);	
 		
-					instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+					instance_create_layer(_xx, y, "particulas", obj_vel);	
 				}
 				
 			}
@@ -281,7 +281,7 @@ switch(estado)
 		//image_blend = c_red;
 		
 		//Criando rastro
-		var _rastro = instance_create_layer(x, y, layer, obj_player_vest);
+		var _rastro = instance_create_layer(x, y, "player_rastro", obj_player_vest);
 		_rastro.xscale = xscale;
 		_rastro.yscale = yscale;
 		

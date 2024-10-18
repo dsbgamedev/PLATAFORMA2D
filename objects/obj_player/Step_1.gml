@@ -20,7 +20,7 @@ if(_temp && !chao)//Acabei de tocar no chão !!!
 	{
 		var _xx = random_range(x - sprite_width, x + sprite_width);	
 		
-		instance_create_depth(_xx, y, depth - 1000, obj_vel);	
+		instance_create_layer(_xx, y, "particulas", obj_vel);	
 	}
 }
 
