@@ -14,6 +14,7 @@ if(_col) //place_meeting(x + velh, y, global.col)
 	velh = 0;
 }
 
+
 var _colv = instance_place(x , y + velv, global.col)
 ////Colisão vertical
 if(_colv)

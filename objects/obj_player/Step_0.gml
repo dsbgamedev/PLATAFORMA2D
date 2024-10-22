@@ -76,7 +76,11 @@ switch(estado)
 		if(_dash && carga > 0)
 		{
 			//Decidindo a direção
-			dir = point_direction(0, 0, (_right - _left), (_down - _up));
+			if(_right || _up || _left || _down)
+			  dir = point_direction(0, 0, (_right - _left), (_down - _up));
+			else
+				//Indo para a direção que estou olhando
+				dir = point_direction(0,0,ver,0);
 			
 			estado = state.dash;	
 			carga--;
@@ -245,8 +249,13 @@ switch(estado)
 		//Dash
 		if(_dash && carga > 0)
 		{
+			
 			//Decidindo a direção
-			dir = point_direction(0, 0, (_right - _left), (_down - _up));
+			if(_right || _up || _left || _down)
+			  dir = point_direction(0, 0, (_right - _left), (_down - _up));
+			else
+				//Indo para a direção que estou olhando
+				dir = point_direction(0,0,ver,0);
 			
 			estado = state.dash;	
 			carga--;
