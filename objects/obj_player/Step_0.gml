@@ -336,5 +336,8 @@ image_blend = make_color_hsv(20, sat, 255);
 xscale = lerp(xscale, 1, .15);
 yscale = lerp(yscale, 1, .15);
 
+//Limita e impede o Player sair da room no eixo X
+x = clamp(x, 0 + sprite_width / 2, room_width - sprite_width/2);
+
 
 

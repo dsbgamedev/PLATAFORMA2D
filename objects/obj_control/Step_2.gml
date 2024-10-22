@@ -26,5 +26,14 @@ if(_colv)
 	velv = 0;
 }
 
-y += velv;
 x += velh;
+
+//Limita e impede o Player sair da room no eixo X
+//Aqui entre o x + = velh ele fica para o player nao tremeer na hora
+//que encostar no eixo x da room
+//se nao ficar aqui ele da um efeito de tentando empurrar
+//x = clamp(x, 0 + sprite_width / 2, room_width - sprite_width/2);
+
+y += velv;
+
+

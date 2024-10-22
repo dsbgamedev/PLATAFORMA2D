@@ -49,7 +49,9 @@
     {"id":{"name":"obj_proximo","path":"objects/obj_proximo/obj_proximo.yy",},},
     {"id":{"name":"obj_serra","path":"objects/obj_serra/obj_serra.yy",},},
     {"id":{"name":"obj_vel","path":"objects/obj_vel/obj_vel.yy",},},
-    {"id":{"name":"rm_inicio","path":"rooms/rm_inicio/rm_inicio.yy",},},
+    {"id":{"name":"rm_turorial_1","path":"rooms/rm_turorial_1/rm_turorial_1.yy",},},
+    {"id":{"name":"rm_tutorial_2","path":"rooms/rm_tutorial_2/rm_tutorial_2.yy",},},
+    {"id":{"name":"snd_teste","path":"sounds/snd_teste/snd_teste.yy",},},
     {"id":{"name":"double_jump_item_1","path":"sprites/double_jump_item_1/double_jump_item_1.yy",},},
     {"id":{"name":"double_jump_item_2","path":"sprites/double_jump_item_2/double_jump_item_2.yy",},},
     {"id":{"name":"double_jump_item_3","path":"sprites/double_jump_item_3/double_jump_item_3.yy",},},
@@ -74,7 +76,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_inicio","path":"rooms/rm_inicio/rm_inicio.yy",},},
+    {"roomId":{"name":"rm_turorial_1","path":"rooms/rm_turorial_1/rm_turorial_1.yy",},},
+    {"roomId":{"name":"rm_tutorial_2","path":"rooms/rm_tutorial_2/rm_tutorial_2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
