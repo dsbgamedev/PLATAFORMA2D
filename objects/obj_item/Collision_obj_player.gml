@@ -8,5 +8,4 @@ for(var i = 0; i < irandom_range(20, 50); i++)
 	ped.sprite_index = sprite_index;
 }
 
-audio_emitter_free(eu);
 instance_destroy();

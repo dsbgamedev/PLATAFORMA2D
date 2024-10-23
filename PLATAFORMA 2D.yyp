@@ -49,6 +49,7 @@
     {"id":{"name":"obj_proximo","path":"objects/obj_proximo/obj_proximo.yy",},},
     {"id":{"name":"obj_serra","path":"objects/obj_serra/obj_serra.yy",},},
     {"id":{"name":"obj_vel","path":"objects/obj_vel/obj_vel.yy",},},
+    {"id":{"name":"rm_level01","path":"rooms/rm_level01/rm_level01.yy",},},
     {"id":{"name":"rm_turorial_1","path":"rooms/rm_turorial_1/rm_turorial_1.yy",},},
     {"id":{"name":"rm_tutorial_2","path":"rooms/rm_tutorial_2/rm_tutorial_2.yy",},},
     {"id":{"name":"snd_teste","path":"sounds/snd_teste/snd_teste.yy",},},
@@ -78,6 +79,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_turorial_1","path":"rooms/rm_turorial_1/rm_turorial_1.yy",},},
     {"roomId":{"name":"rm_tutorial_2","path":"rooms/rm_tutorial_2/rm_tutorial_2.yy",},},
+    {"roomId":{"name":"rm_level01","path":"rooms/rm_level01/rm_level01.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

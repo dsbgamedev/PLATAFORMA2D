@@ -6,3 +6,4 @@ audio_emitter_position(eu, x, y, 0);
 audio_emitter_falloff(eu, 100, 400, 1);
 
 audio_play_sound_on(eu,snd_teste, true, 5);
+
