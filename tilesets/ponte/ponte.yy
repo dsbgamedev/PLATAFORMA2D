@@ -21,8 +21,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"tileset",
-    "path":"sprites/tileset/tileset.yy",
+    "name":"tileset_2",
+    "path":"sprites/tileset_2/tileset_2.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

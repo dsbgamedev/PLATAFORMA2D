@@ -1,3 +1,3 @@
 estado = state.movendo;
 
-vel    = -8;
+velv   = -8;

@@ -48,7 +48,7 @@ event_inherited();
 //State Machine
 enum state //variavel global state usa uma vez e depois se perde
 {
-	parado, movendo, dash, morte	
+	parado, movendo, dash, morte, voltar	
 }
 
 estado = state.parado;

@@ -3,11 +3,20 @@
 
 //Colisão horizontal
 
-var _col = instance_place(x + velh, y, global.col)
+var _colisao = [layer_tilemap_get_id("Solidos")];
 
-if(_col) //place_meeting(x + velh, y, global.col)
+var _col = instance_place(x + velh, y, _colisao);
+
+//Pula sobre o tilemap ponte
+if(velv >= 0)
 {
-	while(!instance_place(x + sign(velh), y, global.col))
+	array_push(_colisao, layer_tilemap_get_id("ponte"));	
+}
+
+
+if(_col) 
+{
+	while(!instance_place(x + sign(velh), y, _colisao))
 	{
 		x += sign(velh);
 	}
@@ -15,16 +24,21 @@ if(_col) //place_meeting(x + velh, y, global.col)
 }
 
 
-var _colv = instance_place(x , y + velv, global.col)
+var _colv = instance_place(x , y + velv, _colisao)
 ////Colisão vertical
 if(_colv)
 {
-	while(!instance_place(x , y + sign(velv), global.col))
+	while(!instance_place(x , y + sign(velv), _colisao))
 	{
 		y += sign(velv);
 	}
+	
 	velv = 0;
 }
+
+//show_message("pulando");
+
+
 
 x += velh;
 
@@ -35,5 +49,6 @@ x += velh;
 //x = clamp(x, 0 + sprite_width / 2, room_width - sprite_width/2);
 
 y += velv;
+
 
 

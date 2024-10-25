@@ -1,10 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+var _colisao = [layer_tilemap_get_id("Solidos")];
+
 //Checando se estou tocando no chão
-chao       = place_meeting(x, y + 1, global.col);
-parede_dir = place_meeting(x + 1, y, global.col);
-parede_esq = place_meeting(x - 1, y, global.col);
+chao       = place_meeting(x, y + 1, _colisao);
+parede_dir = place_meeting(x + 1, y,  _colisao);
+parede_esq = place_meeting(x - 1, y,  _colisao);
+
 
 //Configurando meu timer do pulo
 if(chao)
@@ -45,6 +48,8 @@ _avanco_h = (_right - _left) * max_velh;
 //Valor da aceleração
 if(chao) acel = acel_chao;
 else     acel = acel_ar; 
+
+
 
 #region Switch Estado
 //------------------------- STATE MACHINE------------------------\\
@@ -91,6 +96,8 @@ switch(estado)
 
     #region Movendo	
 	case state.movendo:
+	
+	
 		
 		//Abaixando
 		if(chao && _down)
@@ -147,6 +154,7 @@ switch(estado)
 			{
 				//Estou subindo
 				velv += grav;
+				
 			}
 			
 			//Pulando pelas paredes!!!
@@ -194,6 +202,9 @@ switch(estado)
 		//Pulando
 		if (_jump && (chao || timer_pulo))//ou ele ta no chao ou timer pulo ainda tem valor
 		{
+			
+
+		//show_message("ativooo");
 			velv =- max_velv;
 			
 			//Alterando a escala
@@ -264,6 +275,7 @@ switch(estado)
 		//limitando as velocidades
 		velv = clamp(velv, -max_velv, max_velv);
 		
+		
 		break;
 		#endregion	
 
@@ -311,8 +323,28 @@ switch(estado)
 		
 	#region Morte
 		case state.morte:
-			room_restart();
+		
+			///Explodindo o player
+			for(var i = 0; i < 10; i++)
+			{
+				var p		= instance_create_layer(x, y, layer, obj_pedaco);
+				p.speed     = random_range(1,2);
+				p.direction = random(360);
+			}
+			
+			estado = state.voltar;
+			
+			
 		break;
+	#endregion
+	
+	#region
+		case state.voltar:
+		
+		
+		
+		break;
+	
 	#endregion
 }
 #endregion

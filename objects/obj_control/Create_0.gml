@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-global.col  =  layer_tilemap_get_id("Solidos");
-
 grav       = .3;
 acel_chao  = .1;
 acel_ar    = .07;
