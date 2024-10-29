@@ -9,7 +9,9 @@ deslize    = 2;
 
 //-----------------------velocidades
 velh = 0;
-velv = 0;
+velv = -8;
+velv_inicial = -8;
+velh_inicial = 0;
 
 //----------------------Limite das velocidades
 max_velh = 6;
@@ -28,9 +30,12 @@ limite_parede = 6;
 timer_parede  = 0;
 
 //----------------------Variaveis de controle
+
+criar_pedaco = true;
 chao          = false;
 parede_dir    = false;
 parede_esq    = false;
+pontes        = false;
 xscale	      = 1;
 yscale	      = 1;
 dura	      = room_speed / 4;
@@ -38,6 +43,8 @@ dir		      = 0;
 carga	      = 1;
 ultima_parede = 0;
 ver           = 1;
+iniciado      = true;
+lista         = noone;
 
 //----------------------Controlando cor
 sat = 255;

@@ -7,12 +7,10 @@ var _colisao = [layer_tilemap_get_id("Solidos")];
 
 var _col = instance_place(x + velh, y, _colisao);
 
-//Pula sobre o tilemap ponte
 if(velv >= 0)
 {
 	array_push(_colisao, layer_tilemap_get_id("ponte"));	
 }
-
 
 if(_col) 
 {
@@ -23,8 +21,8 @@ if(_col)
 	velh = 0;
 }
 
-
 var _colv = instance_place(x , y + velv, _colisao)
+
 ////Colisão vertical
 if(_colv)
 {

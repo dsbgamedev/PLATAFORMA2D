@@ -2,11 +2,19 @@
 // You can write your code in this editor
 
 var _colisao = [layer_tilemap_get_id("Solidos")];
+var _col = [layer_tilemap_get_id("ponte")];
+
+//Pula sobre o tilemap ponte
+if(velv >= 0)
+{
+	array_push(_colisao, layer_tilemap_get_id("ponte"));	
+}
 
 //Checando se estou tocando no chão
-chao       = place_meeting(x, y + 1, _colisao);
+chao       = place_meeting(x, y + 1, _colisao  );
 parede_dir = place_meeting(x + 1, y,  _colisao);
 parede_esq = place_meeting(x - 1, y,  _colisao);
+pontes     = place_meeting(x - 1, y,  _col);
 
 
 //Configurando meu timer do pulo
@@ -20,7 +28,7 @@ else
 	if(timer_pulo > 0) timer_pulo--;	
 }
 
-if(parede_dir || parede_esq)
+if(parede_dir || parede_esq )
 {
 	if(parede_dir) ultima_parede = 0;
 	else ultima_parede = 1;
@@ -50,7 +58,6 @@ if(chao) acel = acel_chao;
 else     acel = acel_ar; 
 
 
-
 #region Switch Estado
 //------------------------- STATE MACHINE------------------------\\
 switch(estado)
@@ -62,13 +69,13 @@ switch(estado)
 		velv = 0;
 		
 		//Posso mudar minha velocidade
-		if(_jump && chao)
+		if(_jump && chao && pontes)
 		{
 			velv =- max_velv;	
 		}
 		
 		//Aplicando gravidade
-		if(!chao) velv += grav;
+		if(!chao || !pontes) velv += grav;
 		
 		//Saindo do estado
 		//Movendo 
@@ -97,10 +104,9 @@ switch(estado)
     #region Movendo	
 	case state.movendo:
 	
-	
-		
+
 		//Abaixando
-		if(chao && _down)
+		if(chao && _down || pontes && _down)
 		{
 			xscale = 1.5;	
 			yscale = .5;	
@@ -194,13 +200,13 @@ switch(estado)
 				}
 			}
 		}
-		else if(!chao) //Não estou no chão e nem na parede
+		else if(!chao || !pontes) //Não estou no chão e nem na parede
 		{
 		   velv += grav;
 		}
 		
 		//Pulando
-		if (_jump && (chao || timer_pulo))//ou ele ta no chao ou timer pulo ainda tem valor
+		if (_jump && (chao || pontes || timer_pulo))//ou ele ta no chao ou timer pulo ainda tem valor
 		{
 			
 
@@ -229,7 +235,7 @@ switch(estado)
 		
 		if(buffer_pulo)//Eu posso pular
 		{
-			if(chao || timer_pulo)//Ase demais condições para o pulo são verdadeiras
+			if(chao || pontes || timer_pulo)//Ase demais condições para o pulo são verdadeiras
 			{
 				velv =- max_velv;
 					
@@ -325,24 +331,45 @@ switch(estado)
 		case state.morte:
 		
 			///Explodindo o player
-			for(var i = 0; i < 10; i++)
+			if(criar_pedaco)
 			{
-				var p		= instance_create_layer(x, y, layer, obj_pedaco);
-				p.speed     = random_range(1,2);
-				p.direction = random(360);
+				for(var i = 0; i < 10; i++)
+				{
+					show_debug_message(i);
+					var p		   = instance_create_layer(x, y, layer, obj_pedaco);
+					p.speed        = random_range(2,4);
+					p.direction    = random(360);
+					p.image_angle  = p.direction;
+					p.image_xscale = random_range(.2,.6); 
+					p.image_yscale = p.image_xscale; 
+					p.dest_x       = xstart;
+					p.dest_y       = ystart;
+					p.velh_inicial = velh_inicial;
+					p.velv_inicial = velv_inicial;
+					p.image_blend  =  make_color_hsv(20, sat, 255);
+					lista[i]    = p.id;
+					if(i >= 9) 
+					{
+						criar_pedaco    = false;
+						p.criador       = true;
+						p.lista         = lista;
+						obj_camera.alvo = p;
+						instance_destroy();
+
+					}
+				}
+					
 			}
-			
-			estado = state.voltar;
-			
-			
+	
+		
 		break;
 	#endregion
 	
 	#region
 		case state.voltar:
-		
-		
-		
+			
+
+	
 		break;
 	
 	#endregion
@@ -350,6 +377,9 @@ switch(estado)
 #endregion
 
 #region Carga
+
+//Definindo a cor dele
+image_blend = make_color_hsv(20, sat, 255);
 switch(carga)
 {
 	case 0:
@@ -361,6 +391,7 @@ switch(carga)
 	break;
 }
 #endregion
+
 //Definindo a cor dele
 image_blend = make_color_hsv(20, sat, 255);
 
@@ -369,7 +400,9 @@ xscale = lerp(xscale, 1, .15);
 yscale = lerp(yscale, 1, .15);
 
 //Limita e impede o Player sair da room no eixo X
+
 x = clamp(x, 0 + sprite_width / 2, room_width - sprite_width/2);
+
 
 
 

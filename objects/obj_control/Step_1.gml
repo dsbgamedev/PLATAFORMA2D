@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(iniciado)
+{
+	velh     = velh_inicial;
+	velv     = velv_inicial
+	iniciado = false;
+}
 
 var _colisao = layer_tilemap_get_id("Solidos");
 
@@ -14,9 +20,7 @@ var _temp = instance_place(x, y + 1, _colisao);
 
 //Se isso acontecer quer dizer que eu estava no ar 
 if(_temp && !chao)//Acabei de tocar no chão !!!
-{
-	
-		
+{		
 	xscale = 1.6;
 	yscale = .5;
 	

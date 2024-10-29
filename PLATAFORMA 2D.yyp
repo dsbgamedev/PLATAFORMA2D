@@ -38,6 +38,7 @@
     {"id":{"name":"obj_bonus","path":"objects/obj_bonus/obj_bonus.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
+    {"id":{"name":"obj_criador_serra","path":"objects/obj_criador_serra/obj_criador_serra.yy",},},
     {"id":{"name":"obj_dica","path":"objects/obj_dica/obj_dica.yy",},},
     {"id":{"name":"obj_item","path":"objects/obj_item/obj_item.yy",},},
     {"id":{"name":"obj_morte","path":"objects/obj_morte/obj_morte.yy",},},
@@ -80,9 +81,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_level01","path":"rooms/rm_level01/rm_level01.yy",},},
     {"roomId":{"name":"rm_turorial_1","path":"rooms/rm_turorial_1/rm_turorial_1.yy",},},
     {"roomId":{"name":"rm_tutorial_2","path":"rooms/rm_tutorial_2/rm_tutorial_2.yy",},},
+    {"roomId":{"name":"rm_level01","path":"rooms/rm_level01/rm_level01.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

@@ -1,3 +1,8 @@
-estado = state.movendo;
+//estado = state.movendo;
 
-velv   = -8;
+
+//velv         = -8;
+//velv_inicial = -8;
+
+
+

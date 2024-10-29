@@ -51,14 +51,19 @@ enum state //variavel global state usa uma vez e depois se perde
 	parado, movendo, dash, morte, voltar	
 }
 
-estado = state.parado;
+estado = state.movendo;
+
+lista = noone;
 
 //----------------CRIANDO A CAMERA
 
 if(!instance_exists(obj_camera))
 {
 	//Camera não existe
-	instance_create_layer(0,0, "camera", obj_camera);
+	instance_create_layer(x, y, "camera", obj_camera);
 }
+
+//Definindo a cor dele
+image_blend = make_color_hsv(20, sat, 255);
 
 
