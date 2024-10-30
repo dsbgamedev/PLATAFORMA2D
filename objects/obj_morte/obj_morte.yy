@@ -9,8 +9,8 @@
   "name":"obj_morte",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Morte",
+    "path":"folders/Objects/Morte.yy",
   },
   "parentObjectId":null,
   "persistent":false,

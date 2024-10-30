@@ -60,3 +60,19 @@ switch(estado)
 }
 
 show_debug_message(estado);
+
+if(pai != noone)
+{
+	var _tile = layer_tilemap_get_id("Solidos");
+	
+	//Alguem me criou
+	var _col = instance_place( x, y, _tile);
+	
+	//Checar se estou tendo colisão
+	if(_col)
+	{
+		//E só entao chegar se nao é com meu pai
+		if(_col != pai)instance_destroy();	
+	}
+}
+

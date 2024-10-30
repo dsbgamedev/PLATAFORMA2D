@@ -10,8 +10,8 @@
   "name":"obj_serra",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Morte",
+    "path":"folders/Objects/Morte.yy",
   },
   "parentObjectId":{
     "name":"obj_morte",
