@@ -4,6 +4,8 @@
 var _colisao = [layer_tilemap_get_id("Solidos")];
 var _col = [layer_tilemap_get_id("ponte")];
 
+
+
 //Pula sobre o tilemap ponte
 if(velv >= 0)
 {
@@ -40,7 +42,8 @@ else
 }
 
 //-------------------------Controles
-var _left, _right,_up, _down, _jump, _jumps, _avanco_h, _dash;
+/*
+var _left, _right,_up, _down, _jump, _jumps, _dash;
 
 _left  = keyboard_check(ord("A"));
 _right = keyboard_check(ord("D"));
@@ -49,10 +52,12 @@ _down = keyboard_check(ord("S"));
 _jump  = keyboard_check_pressed(vk_space);
 _dash  = keyboard_check_pressed(ord("L"));
 _jumps  = keyboard_check_released(vk_space);
-
-
 //Configurando informações da movimentação
-_avanco_h = (_right - _left) * max_velh;
+avanco_h = (_right - _left) * max_velh;
+*/
+
+controla();
+
 //Valor da aceleração
 if(chao) acel = acel_chao;
 else     acel = acel_ar; 
@@ -114,7 +119,7 @@ switch(estado)
 		
 		
 		//Movendo
-		velh = lerp(velh, _avanco_h, acel);
+		velh = lerp(velh, avanco_h, acel);
 		
 		//Aplicando "poeira"
 		if(abs(velh) > max_velh - .5 && chao)

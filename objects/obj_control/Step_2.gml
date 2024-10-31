@@ -36,7 +36,9 @@ if(_colv)
 
 //show_message("pulando");
 
-
+//Checando se devo ou nao ser controlado
+//Nao estou colidindo com obj_dica (meu sensor de controle)
+//if(!place_meeting(x,y,obj_dica)) /*controlado = false*/
 
 x += velh;
 

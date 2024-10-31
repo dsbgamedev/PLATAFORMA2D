@@ -6,6 +6,7 @@ acel_chao  = .1;
 acel_ar    = .07;
 acel       = acel_chao;
 deslize    = 2;
+avanco_h   = 0;
 
 //-----------------------velocidades
 velh = 0;
@@ -45,6 +46,7 @@ ultima_parede = 0;
 ver           = 1;
 iniciado      = true;
 lista         = noone;
+controlado    = false;
 
 //----------------------Controlando cor
 sat = 255;

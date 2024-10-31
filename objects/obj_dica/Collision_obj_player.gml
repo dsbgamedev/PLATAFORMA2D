@@ -8,3 +8,4 @@ if(!ativo)
 	yy = other.y - 32;
 	xx = other.x;
 }
+
