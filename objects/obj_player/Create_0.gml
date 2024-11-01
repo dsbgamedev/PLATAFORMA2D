@@ -4,6 +4,15 @@
 // Inherit the parent event
 event_inherited();
 
+//teste macros / enum
+//show_message(GRAVIDADES);
+//show_message(state.morte);
+
+bom_dia = function()
+{
+	show_message("teste!!!!!");	
+}
+
 
 //State Machine
 enum state //variavel global state usa uma vez e depois se perde

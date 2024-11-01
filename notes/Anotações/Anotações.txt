@@ -1,0 +1,33 @@
+* #Macro - É uma constante
+	* Um tipo de variavel que não varia
+	* Macros nao precisa ser iniciadas.
+	* Quando o jogo for complicado ele converte em TODO O CÓDIGO
+	* A palavra da macro pelo valor dela.
+	* Ou seja, quando iniciar ele vai troca a varivavel GRAVIDADE para o valor .2
+	* Exemplo: #macro GRAVIDADE .2 (depois de macro nao existe ponto e virgula)
+
+* Enum ou enumerator - é uma constante que funciona como uma lista de valores	
+	* só aceita numeros e nao aceita strig metodos
+	* posso colocar valores e ele muda o valor da lista
+	* no caso vento mudaria de 1 para 5
+	* no final nao tem virgula
+	* enum teste  (ele por padrao na lista começa 0,1,2)
+	  {	
+		ar,
+		vento = 5,
+		terra
+	  }	
+
+*  WITH - COM (ele permite a execução de um código dentro de outra instância)
+	* Exemplo:
+	* with(obj_teste)
+		{
+			//Todo este código vai executar de dentro do objeto teste
+			//Da para executar funções dentro dels
+			//exemplo :
+			instante_destroy();
+			//Para chamar a isntancia que de fato ta raodando o codigo
+			//Usa-se a palavra other
+			other.morrendo();  //Aqui é o objeto varivavel
+		}
+* DS_list - 
