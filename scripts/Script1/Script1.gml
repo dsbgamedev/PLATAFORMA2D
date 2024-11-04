@@ -5,6 +5,7 @@
 //global.controles = [];
 //global.gamepad   = 0;
 
+/*
 //Criando um enum para facilitar a leitura do codigo
 enum status_bloqueio
 {

@@ -2,7 +2,10 @@
 // You can write your code in this editor
 
 
+efeito_mouse();
 
+
+/*
 
 //Decidindo se eu devo girar ou não
 if(status == status_bloqueio.bloqueado)
