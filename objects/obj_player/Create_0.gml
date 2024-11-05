@@ -103,11 +103,12 @@ controla_keyboard = function()
 
 	_left  = keyboard_check(ord("A"));
 	_right = keyboard_check(ord("D"));
-	_up = keyboard_check(ord("W"));
-	_down = keyboard_check(ord("S"));
+	_up    = keyboard_check(ord("W"));
+	_down  =  keyboard_check(ord("S"));
 	_jump  = keyboard_check_pressed(vk_space);
 	_dash  = keyboard_check_pressed(ord("L"));
-	_jumps  = keyboard_check_released(vk_space);
+	_jumps = keyboard_check_released(vk_space);
+	_esc   =  keyboard_check_released(vk_escape);
 	//Configurando informações da movimentação
 	avanco_h = (_right - _left) * max_velh;
 }

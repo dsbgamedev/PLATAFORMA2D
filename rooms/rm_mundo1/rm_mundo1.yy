@@ -55,8 +55,8 @@
   ],
   "name":"rm_mundo1",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Mundo1",
+    "path":"folders/Rooms/Mundo1.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

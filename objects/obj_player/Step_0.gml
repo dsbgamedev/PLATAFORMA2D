@@ -4,6 +4,11 @@
 var _colisao = [layer_tilemap_get_id("Solidos")];
 var _col = [layer_tilemap_get_id("ponte")];
 
+//Volta para o menu Mundos
+if(keyboard_check_released(vk_escape))
+{
+	room_goto(rm_mundos);	
+}
 
 
 //Pula sobre o tilemap ponte

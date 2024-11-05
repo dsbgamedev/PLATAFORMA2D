@@ -1,7 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-global.pause = false;
-
+global.pause  = false;
 
 function efeitos()
 {
@@ -11,6 +10,7 @@ function efeitos()
 	scale = scale_original;
 	//valor = shader_get_uniform(sh_cor, "valor");
 	//valor2 = bloqueado;
+	
 	
 	#endregion
 
@@ -32,16 +32,18 @@ function efeitos()
 		image_yscale = image_xscale;
 	}
 
-	//efeito_cor = function()
-	//{
-	//	if (valor2 > 0)
-	//	{
-	//		valor2 -= 0.01;
-	//	}
-	//	else
-	//	{
-	//		valor2 = 0;
-	//	}
-	//}
+	/*
+	efeito_cor = function()
+	{
+		if (valor2 > 0)
+		{
+			valor2 -= 0.01;
+		}
+		else
+		{
+			valor2 = 0;
+		}
+	}
+	*/
 	#endregion
 }
