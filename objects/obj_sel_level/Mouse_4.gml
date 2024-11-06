@@ -9,8 +9,9 @@ if(fazer)
 	{
 		//instance_create_layer(0,0,layer, obj_transicao, {destino: destino});
 		room_goto(destino);
+		
 	}
-	//show_message(destino);
+	
 }
 
 fazer = false;

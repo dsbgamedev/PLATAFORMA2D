@@ -18,6 +18,10 @@ global.mundos = [status_bloqueio.desbloqueado, status_bloqueio.bloqueado, status
 status_bloqueio.bloqueado, status_bloqueio.bloqueado];
 
 global.mundo1 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+global.mundo2 = [1, 0];
+global.mundo3 = [1];
+global.mundo4 = [1];
+global.mundo5 = [1];
 
-//Defininfo a sprite para cada mundo
+//Definindo a sprite para cada mundo
 global.sprite_mundos = [spr_planeta, spr_planeta2, spr_planeta3, spr_planeta4, spr_planeta5];

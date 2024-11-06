@@ -4,7 +4,7 @@
 
 qtd = instance_number(obj_item);
 
-fazer = true;
+//fazer = false;
 
 //Checando meu mundo atual
 var _room = room_get_name(room);
@@ -15,14 +15,14 @@ var _tudo = string_split(_room, "_level_");
 var _mundo = _tudo[0];
 var _level = _tudo[1];
 
-//show_message(_mundo);
-//show_message(_level);
+show_message(_mundo);
+show_message(_level);
 
 //Meu destino é o mesmo mundo, só que o proximo level
 var _destino = _mundo + "_level_" + string(real(_level)+1);
 destino      = asset_get_index(_destino); 
 
-//Se ele nao tem destino, entoa o valor do destino é -1
+//Se ele nao tem destino, então o valor do destino é -1
 //Nesse caso eu volto para seleção de leveis
 if(destino == -1)
 {
