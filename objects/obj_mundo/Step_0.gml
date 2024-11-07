@@ -13,5 +13,5 @@ else
 	image_speed = 1;
 		
 	efeito_mouse();
-	//efeito_cor();
+	efeito_cor();
 }

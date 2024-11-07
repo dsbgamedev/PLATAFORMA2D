@@ -345,7 +345,7 @@ switch(estado)
 			{
 				for(var i = 0; i < 10; i++)
 				{
-					show_debug_message(i);
+					//show_debug_message(i);
 					var p		   = instance_create_layer(x, y, layer, obj_pedaco);
 					p.speed        = random_range(2,4);
 					p.direction    = random(360);
@@ -370,7 +370,9 @@ switch(estado)
 				}
 					
 			}
-	
+			
+			//Criando o screenshake depois que morri
+			efeito_screenshake(10);
 		
 		break;
 	#endregion

@@ -8,9 +8,8 @@ function efeitos()
 	#region variaveis dos efeitos
 	scale_original = image_xscale;
 	scale = scale_original;
-	//valor = shader_get_uniform(sh_cor, "valor");
-	//valor2 = bloqueado;
-	
+	valor = shader_get_uniform(sh_cor, "valor");
+	valor2 = bloqueado;
 	
 	#endregion
 
@@ -32,7 +31,6 @@ function efeitos()
 		image_yscale = image_xscale;
 	}
 
-	/*
 	efeito_cor = function()
 	{
 		if (valor2 > 0)
@@ -44,6 +42,12 @@ function efeitos()
 			valor2 = 0;
 		}
 	}
-	*/
+	
+	efeito_screenshake = function(_shake)
+	{
+		var _screenshake = instance_create_layer(0 , 0, layer, obj_screenshake);
+		_screenshake.shake = _shake;
+	}
+	
 	#endregion
 }

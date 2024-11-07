@@ -4,6 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
+efeitos();
 //teste macros / enum
 //show_message(GRAVIDADES);
 //show_message(state.morte);
