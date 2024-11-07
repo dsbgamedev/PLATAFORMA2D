@@ -23,10 +23,11 @@ var _destino = _mundo + "_level_" + string(real(_level)+1);
 destino      = asset_get_index(_destino); 
 
 //Se ele nao tem destino, então o valor do destino é -1
-//Nesse caso eu volto para seleção de leveis
+//Nesse caso eu volto para seleção de leveis e desbloqueio um novo mundo
 if(destino == -1)
 {
 	destino = asset_get_index(_mundo);	
+	global.mundos[mundo+1] = status_bloqueio.desbloqueado;	
 }
 
 var _mundo2 = string_split(_mundo, "rm_");
