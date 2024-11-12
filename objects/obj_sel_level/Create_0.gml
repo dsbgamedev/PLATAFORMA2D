@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+audio_stop_all();
 fazer = true;
 
 //Indo para meu destino
@@ -20,4 +20,8 @@ status = _global[level-1];
 //show_message(status);
 
 efeitos();
+
+
+
+
 

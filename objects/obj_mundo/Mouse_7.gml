@@ -7,4 +7,5 @@ if(status == status_bloqueio.desbloqueado)
 	//show_message(destino);
 }
 
+//audio_stop_all();
 //fazer = false;

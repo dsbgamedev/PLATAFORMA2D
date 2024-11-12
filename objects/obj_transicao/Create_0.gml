@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
 //global.pause = true;
 var _width = view_wport[0];
 

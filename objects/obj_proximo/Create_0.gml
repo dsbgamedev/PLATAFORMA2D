@@ -3,7 +3,7 @@
 
 qtd = instance_number(obj_item);
 
-//fazer = false;
+//fazer = true;
 
 //Checando meu mundo atual
 var _room = room_get_name(room);
@@ -14,8 +14,8 @@ var _tudo = string_split(_room, "_level_");
 var _mundo = _tudo[0];
 var _level = _tudo[1];
 
-show_message(_mundo);
-show_message(_level);
+//show_message(_mundo);
+//show_message(_level);
 
 //Meu destino é o mesmo mundo, só que o proximo level
 var _destino = _mundo + "_level_" + string(real(_level)+1);

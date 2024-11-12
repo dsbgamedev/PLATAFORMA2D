@@ -11,7 +11,6 @@
     {"name":"inst_47D7E47A","path":"rooms/rm_mundos/rm_mundos.yy",},
     {"name":"inst_23D88A40","path":"rooms/rm_mundos/rm_mundos.yy",},
     {"name":"inst_7664CA9B","path":"rooms/rm_mundos/rm_mundos.yy",},
-    {"name":"inst_73687C42","path":"rooms/rm_mundos/rm_mundos.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -35,8 +34,7 @@
         {"$GMRInstance":"v1","%Name":"inst_7664CA9B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7664CA9B","objectId":{"name":"obj_mundo","path":"objects/obj_mundo/obj_mundo.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_mundo","path":"objects/obj_mundo/obj_mundo.yy",},"propertyId":{"name":"mundo","path":"objects/obj_mundo/obj_mundo.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"4",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_mundo","path":"objects/obj_mundo/obj_mundo.yy",},"propertyId":{"name":"destino","path":"objects/obj_mundo/obj_mundo.yy",},"resource":{"name":"rm_mundo5","path":"rooms/rm_mundo5/rm_mundo5.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_mundo5",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":324.5,"y":275.0,},
-        {"$GMRInstance":"v1","%Name":"inst_73687C42","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_73687C42","objectId":{"name":"obj_screenshake","path":"objects/obj_screenshake/obj_screenshake.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":43.0,"y":41.0,},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":333.5,"y":309.0,},
       ],"layers":[],"name":"Mudos","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":"_filter_vignette","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[
         {"name":"g_VignetteEdges","type":0,"value":"0.5",},

@@ -2,7 +2,8 @@
 // You can write your code in this editor
 
 //Rodando
-
+if(! global.pause)
+{
 image_angle += rot;
 
 switch(estado)
@@ -72,7 +73,9 @@ if(pai != noone)
 	if(_col)
 	{
 		//E só entao chegar se nao é com meu pai
-		if(_col != pai)instance_destroy();	
+		if(_col != pai)instance_destroy();
+		
+		
 	}
 }
-
+}

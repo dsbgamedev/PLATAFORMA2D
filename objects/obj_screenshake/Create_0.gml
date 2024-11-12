@@ -3,3 +3,6 @@
 
 //Valor da "tremencia"
 shake = 10;
+
+efeitos();
+

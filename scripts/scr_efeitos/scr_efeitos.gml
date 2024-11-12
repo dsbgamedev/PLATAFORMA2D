@@ -48,6 +48,12 @@ function efeitos()
 		var _screenshake = instance_create_layer(0 , 0, layer, obj_screenshake);
 		_screenshake.shake = _shake;
 	}
+
+	efeito_som = function(_som , _variacao = .1)
+	{
+		var _pitch = random_range(1 - _variacao, 1 + _variacao);	
+		audio_play_sound(_som, 0, 0, , , _pitch);
+	}
 	
 	#endregion
 }
