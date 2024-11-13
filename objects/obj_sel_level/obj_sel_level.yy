@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_seletor_fase",
-    "path":"sprites/spr_seletor_fase/spr_seletor_fase.yy",
+    "name":"spr_borda2",
+    "path":"sprites/spr_borda2/spr_borda2.yy",
   },
   "spriteMaskId":null,
   "visible":true,
